@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS funko_db;
+
+CREATE DATABASE funko_db;
