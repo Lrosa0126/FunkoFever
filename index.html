@@ -7,13 +7,13 @@
 <body>
   <header>
     <nav>
-      <a href="/">Home</a>
-      <a href="/shop">Shop</a>
-      <a href="/cart">Cart</a>
+      <a href="/">Register</a>
+      <a href="/shop">Log-in</a>
+      <a id="cart" href="/cart">&#x1F6D2</a>
     </nav>
     <section class="categories">
         <ul>
-          <li><a href="/category/category_id">New Release</a></li>
+          <li><a href="/category/category_id">New Releases</a></li>
           <li><a href="/category/category_id">Anime</a></li>
           <li><a href="/category/category_id">Television</a></li>
           <li><a href="/category/category_id">Movies</a></li>
@@ -22,6 +22,11 @@
       </section>
     <h1>Welcome to FunkoFever!</h1>
   </header>
+
+  <form class="search-form" action="/search" method="GET">
+    <input type="text" name="query" placeholder="Search..." required>
+    <button type="submit">Search</button>
+  </form>
 
 
   <section class="pops">

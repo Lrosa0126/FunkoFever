@@ -23,6 +23,11 @@
     <h1>Welcome to FunkoFever!</h1>
   </header>
 
+<form class="search-form" action="/search" method="GET">
+  <input type="text" name="query" placeholder="Search..." required>
+  <button type="submit">Search</button>
+</form>
+
   {{#each funkodata}}
   <section class="featured">
     <h2>{{name}}</h2>
