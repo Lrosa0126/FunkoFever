@@ -20,4 +20,4 @@ if (process.env.JAWSDB_URL) {
 
 module.exports = sequelize;
 
-// taken from the MVC mini project:  develope/config/connection.js
+

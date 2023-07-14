@@ -2,5 +2,14 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.8.0",
     "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.5.1",
+    "sequelize": "^6.32.1"
   }
 }
