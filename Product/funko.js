@@ -100,4 +100,19 @@ const funkodata = [
 
 const funkoInfo = () => funko.bulkCreate(funkodata);
 
+
+
 module.exports = funkoInfo;
+
+
+const seedDatabase = async () => {
+  try {
+    await Funko.sync({ force: true });
+    await Funko.bulkCreate(funkodata);
+    console.log('Database seeded successfully');
+  } catch (error) {
+    console.error('Error seeding database:', error);
+  }
+};
+
+seedDatabase();
