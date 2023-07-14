@@ -11,5 +11,23 @@
     "express-session": "^1.17.3",
     "mysql2": "^3.5.1",
     "sequelize": "^6.32.1"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "funkofever",
+  "description": "Testing github",
+  "version": "1.0.0",
+  "main": "controllers.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lrosa0126/FunkoFever.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lrosa0126/FunkoFever/issues"
+  },
+  "homepage": "https://github.com/Lrosa0126/FunkoFever#readme"
 }
