@@ -94,18 +94,20 @@ h1 {
 
 .categories {
   background-color: #f5f5f5;
-  padding: 20px;
+  padding: 30px;
   margin-bottom: 30px;
   margin-left: 30%;
   margin-right: 30%;
   font-size:x-large;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 .categories ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .categories li {
