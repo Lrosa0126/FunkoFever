@@ -1,9 +1,9 @@
 const sequelize = require('../config/connection');
-const Nissan = require('../models/Nissan');
-const nissanData = require('./nissanData.json');
+const Funko = require('../models/product');
+const funkoData = require('./funkoData.json');
 const seedDatabase = async () => {
   await sequelize.sync({ force: false });
-  const Nissans = await Nissan.bulkCreate(nissanData);
+  const Funko = await Funko.bulkCreate(nissanData);
 };
 seedDatabase();
 
