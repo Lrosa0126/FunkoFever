@@ -1,5 +1,4 @@
-const { Funko } = require('../models');
-
+const Funko = require('../models');
 const funkodata = [
   {
     name: 'Funko Pop - Movies - Grinch in Underwear',
@@ -102,7 +101,7 @@ const funkoInfo = () => funko.bulkCreate(funkodata);
 
 
 
-module.exports = funkoInfo;
+module.exports = funkodata;
 
 
 const seedDatabase = async () => {

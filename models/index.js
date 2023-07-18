@@ -1,16 +1,13 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const User = require('./User');
+const Product = require('./product');
 
-const Funko = sequelize.define('Funko', {
-  name: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  price: {
-    type: DataTypes.DECIMAL(10, 2),
-    allowNull: false,
-  },
-  // Other model attributes
+User.hasMany(Product, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
 });
 
-module.exports = Funko;
+Product.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+module.exports = { User, Product };
