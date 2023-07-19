@@ -1,44 +1,46 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>FunkoFever</title>
-  <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-  <header>
-    <nav class="nav-menu">
-      <a href="/">Home</a>
-      <a href="/shop">Shop</a>
-      <a href="/cart">Cart</a>
-    </nav>
-     <img src="/image/FunkoFever.png" alt="FunkoFever Logo" class="logo-image">
-    <section class="Search">
-  <form class="search-form" action="/search" method="GET">
-    <input type="text" name="query" placeholder="Search..." required>
-    <button type="submit">Search</button>
-  </form>
-    </section>
-  </header>
+  <head>
+    <title>FunkoFever</title>
+    <link rel='stylesheet' href='/styles.css' />
+  </head>
+  <body>
+    <header>
+      <nav class='nav-menu'>
+        <a href='/'>Home</a>
+        <a href='/shop'>Shop</a>
+        <a href='/cart'>Cart</a>
+        <a href='/login'>Login</a>
+        <a href='/signup'>Signup</a>
+      </nav>
+      <img
+        src='/image/FunkoFever.png'
+        alt='FunkoFever Logo'
+        class='logo-image'
+      />
+      <section class='Search'>
+        <form class='search-form' action='/search' method='GET'>
+          <input type='text' name='query' placeholder='Search...' required />
+          <button type='submit'>Search</button>
+        </form>
+      </section>
+    </header>
 
-<div class="product-container">
-  {{#each items}}
-  <a href="/product/{{id}}" class="product-link">
-    <div class="product">
-      <h2>{{name}}</h2>
-      <img src="{{imagePath}}" alt="{{name}}" class="product-image">
-      <p>Price: ${{price}}</p>
-      <a href="/product/{{id}}">View Details</a>
+    <div class='product-container'>
+      {{#each items}}
+        <a href='/product/{{id}}' class='product-link'>
+          <div class='product'>
+            <h2>{{name}}</h2>
+            <img src='{{imagePath}}' alt='{{name}}' class='product-image' />
+            <p>Price: ${{price}}</p>
+            <a href='/product/{{id}}'>View Details</a>
+          </div>
+        </a>
+      {{/each}}
     </div>
-  </a>
-  {{/each}}
-</div>
 
-  
+    <footer>
+      <p>&copy; 2023 FunkoFever - All rights reserved</p>
+    </footer>
 
-  <footer>
-    <p>&copy; 2023 FunkoFever - All rights reserved</p>
-  </footer>
-
-</body>
+  </body>
 </html>
-
