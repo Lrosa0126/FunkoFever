@@ -28,16 +28,21 @@
     <button type="submit">Search</button>
   </form>
 
-  <div class="product-container">
-    {{#each items}}
+
+<div class="product-container">
+  {{#each items}}
+  <a href="/product/{{@index}}" class="product-link">
     <div class="product">
       <h2>{{name}}</h2>
       <img src="{{imagePath}}" alt="{{name}}" class="product-image">
       <p>Price: ${{price}}</p>
       <a href="/product/{{@index}}">View Details</a>
     </div>
-    {{/each}}
-  </div>
+  </a>
+  {{/each}}
+</div>
+
+  
 
   <footer>
     <p>&copy; 2023 FunkoFever - All rights reserved</p>
