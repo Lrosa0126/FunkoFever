@@ -9,6 +9,8 @@ const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const funkoData = require('./Products/funkoData.json');
 console.log('funkoData', funkoData);
+const { getCartData } = require(path.join(__dirname, 'public/cart.js'));
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -57,7 +59,10 @@ app.get('/product/:id', (req, res) => {
     res.render('product', { product, layout: 'main' });
   }
 });
-
+app.get('/cart', (req, res) => {
+  // Render the cart view (cart.handlebars) and pass the cart data
+  res.render('cart', { cart: getCartData(), layout: 'main' });
+});
 
 app.use('/api', homeController);
 app.use(routes);
