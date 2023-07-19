@@ -1,98 +1,44 @@
-<html>
-  <head>
-    <title>FunkoFever</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href='/'>Home</a>
-        <a href='/shop'>Shop</a>
-        <a href='/cart'>Cart</a>
-        <a href='/login'>Login</a>
-        <a href='/Sign-up'>Sign-Up</a>
-      </nav>
-      <section class='categories'>
-        <ul>
-          <li><a href='/category/category_id'>New Release</a></li>
-          <li><a href='/category/category_id'>Anime</a></li>
-          <li><a href='/category/category_id'>Television</a></li>
-          <li><a href='/category/category_id'>Movies</a></li>
-          <li><a href='/category/category_id'>Sports</a></li>
-        </ul>
-      </section>
-      <h1>Welcome to FunkoFever!</h1>
-    </header>
-
-    <form class='search-form' action='/search' method='GET'>
-      <input type='text' name='query' placeholder='Search...' required />
-      <button type='submit'>Search</button>
-    </form>
-
-    {{#each items}}
-      <section class='featured'>
-        <h2>{{name}}</h2>
-        <div class='product'>
-          <img src='path_to_image' alt='{{name}}' />
-          <h3>{{name}}</h3>
-          <p>Price: ${{price}}</p>
-          <a href='/product/{{@index}}'>View Details</a>
-        </div>
-      </section>
-    {{/each}}
-
-    <footer>
-      <p>&copy; 2023 FunkoFever - All rights reserved</p>
-    </footer>
-
-    <script src='scripts.js'></script>
-  </body>
-</html>
-
-{{!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>FunkoFever</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header>
-    <nav>
+    <nav class="nav-menu">
       <a href="/">Home</a>
       <a href="/shop">Shop</a>
       <a href="/cart">Cart</a>
     </nav>
-    <section class="categories">
-        <ul>
-          <li><a href="/category/category_id">New Release</a></li>
-          <li><a href="/category/category_id">Anime</a></li>
-          <li><a href="/category/category_id">Television</a></li>
-          <li><a href="/category/category_id">Movies</a></li>
-          <li><a href="/category/category_id">Sports</a></li>
-        </ul>
-      </section>
-    <h1>Welcome to FunkoFever!</h1>
+     <img src="/image/FunkoFever.png" alt="FunkoFever Logo" class="logo-image">
+    <section class="Search">
+  <form class="search-form" action="/search" method="GET">
+    <input type="text" name="query" placeholder="Search..." required>
+    <button type="submit">Search</button>
+  </form>
+    </section>
   </header>
 
-<form class="search-form" action="/search" method="GET">
-  <input type="text" name="query" placeholder="Search..." required>
-  <button type="submit">Search</button>
-</form>
-
-  {{#each funkoData}}
-  <section class="featured">
-    <h2>{{name}}</h2>
+<div class="product-container">
+  {{#each items}}
+  <a href="/product/{{id}}" class="product-link">
     <div class="product">
-      <img src="path_to_image" alt="{{name}}">
-      <h3>{{name}}</h3>
+      <h2>{{name}}</h2>
+      <img src="{{imagePath}}" alt="{{name}}" class="product-image">
       <p>Price: ${{price}}</p>
-      <a href="/product/{{../index}}">View Details</a>
+      <a href="/product/{{id}}">View Details</a>
     </div>
-  </section>
+  </a>
   {{/each}}
+</div>
+
+  
 
   <footer>
     <p>&copy; 2023 FunkoFever - All rights reserved</p>
   </footer>
 
-  <script src="scripts.js"></script>
 </body>
-</html> --}}
+</html>
+
