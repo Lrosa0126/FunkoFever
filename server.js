@@ -13,13 +13,19 @@ const PORT = process.env.PORT || 3001;
 
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  cookie: {
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    httpOnly: true,
+    secure: false, // set to true if your using https
+    sameSite: 'strict',
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize,
   }),
 };
+app.use(session(sess));
 
 const hbs = exphbs.create({
   /* handlebars configuration */
@@ -27,8 +33,6 @@ const hbs = exphbs.create({
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-
-app.use(session(sess));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
