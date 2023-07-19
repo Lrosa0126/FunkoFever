@@ -8,7 +8,7 @@ const homeController = require('./controllers/api/homeController');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const funkoData = require('./Products/funkoData.json');
-
+console.log('funkoData', funkoData);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -44,16 +44,19 @@ app.get('/', (req, res) => {
 });
 
 app.get('/product/:id', (req, res) => {
-  const productId = req.params.id; // Get the value of the "id" parameter from the request
+  const productId = parseInt(req.params.id, 10); // Convert the ID parameter to a number
   console.log('Product ID:', productId);
-  // Find the product in the funkData array based on the id
+  // Find the product in the funkoData array based on the id
   const product = funkoData.find(item => item.id === productId);
 
-
+  if (!product) {
+    // Handle case when product is not found
+    res.status(404).send('Product not found');
+  } else {
     // Render the "product" template and pass the specific product data
     res.render('product', { product, layout: 'main' });
   }
-);
+});
 
 
 app.use('/api', homeController);
