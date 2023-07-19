@@ -6,6 +6,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const homeController = require('./controllers/api/homeController');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
+const funkoData = require('./Products/funkoData.json');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -36,8 +37,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', homeController);
 app.use(routes);
 
+// Add a route for the homepage
 app.get('/', (req, res) => {
-  res.render('homepage', { layout: false });
+  res.render('home', { items: funkoData, layout: 'main' });
 });
 
 sequelize.sync({ force: false }).then(() => {
