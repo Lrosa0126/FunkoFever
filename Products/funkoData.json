@@ -1,98 +1,117 @@
 [
-    {
-      "name": "Funko Pop - Movies - Grinch in Underwear",
-      "price": "49.99",
-      "category": "movies"
-    },
-    {
-      "name": "Funko Pop - Television - Wednesday Addams",
-      "price": "49.99",
-      "category": "television"
-    },
-    {
-      "name": "Funko Pop - Anime - Monkey D. Luffy",
-      "price": "49.99",
-      "category": "anime"
-    },
-    {
-      "name": "Funko Pop - Anime - Boa Hancock",
-      "price": "49.99",
-      "category": "anime"
-    },
-    {
-      "name": "Funko Pop - Anime - Nami",
-      "price": "49.99",
-      "category": "anime"
-    },
-    {
-      "name": "Funko Pop - Anime - Sanji",
-      "price": "49.99",
-      "category": "anime"
-    },
-    {
-      "name": "Funko Pop - Anime - Roronoa Zoro",
-      "price": "49.99",
-      "category": "anime"
-    },
-    {
-      "name": "Funko Pop - Movies -Venomized Jack O Lantern",
-      "price": "49.99",
-      "category": "movies"
-    },
-    {
-      "name": "Funko Pop - Movies - Emily",
-      "price": "49.99",
-      "category": "movies"
-    },
-    {
-      "name": "Funko Pop - Artists - Britney Spears",
-      "price": "49.99",
-      "category": "artists"
-    },
-    {
-      "name": "Funko Pop - Movies - Zero With Bone (Chase)",
-      "price": "49.99",
-      "category": "artists"
-    },
-    {
-      "name": "Funko Pop - Movies - Scarlet Witch",
-      "price": "49.99",
-      "category": "movies"
-    },
-    {
-      "name": "Funko Pop - Artists - Selena",
-      "price": "49.99",
-      "category": "artists"
-    },
-    {
-      "name": "Funko Pop - Movies - Dracula",
-      "price": "49.99",
-      "category": "Movies"
-    },
-    {
-      "name": "Funko Pop - Sports - Lebron James",
-      "price": "49.99",
-      "category": "sports"
-    },
-    {
-      "name": "Funko Pop - Sports - Koby Bryant",
-      "price": "49.99",
-      "category": "sports"
-    },
-    {
-      "name": "Funko Pop - Sports - Corey Seager",
-      "price": "49.99",
-      "category": "sports"
-    },
-    {
-      "name": "Funko Pop - Sports - Mookie Bets",
-      "price": "49.99",
-      "category": "sports"
-    },
-    {
-      "name": "Funko Pop - Sports - Cody bellinger",
-      "price": "49.99",
-      "category": "sports"
-    }
-  ]
-  
+  {
+  "name": "Funko Pop - Movies - Grinch in Underwear",
+  "price": "46.00",
+  "category": "movies",
+  "imagePath": "/image/Grinch.jpeg"
+  },
+  {
+    "name": "Funko Pop - Television - Wednesday Addams",
+    "price": "75.00",
+    "category": "television",
+    "imagePath": "/image/Wednesday_Addams.jpg"
+  },
+  {
+    "name": "Funko Pop - Anime - Monkey D. Luffy",
+    "price": "25.00",
+    "category": "anime",
+    "imagePath": "/image/Luffy.jpg"
+  },
+  {
+    "name": "Funko Pop - Anime - Boa Hancock",
+    "price": "40.00",
+    "category": "anime",
+    "imagePath": "/image/Boa.jpeg"
+  },
+  {
+    "name": "Funko Pop - Anime - Nami",
+    "price": "30.00",
+    "category": "anime",
+    "imagePath": "/image/Nami.jpeg"
+  },
+  {
+    "name": "Funko Pop - Anime - Sanji",
+    "price": "49.99",
+    "category": "anime",
+    "imagePath": "/image/Sanji.jpg"
+  },
+  {
+    "name": "Funko Pop - Anime - Roronoa Zoro",
+    "price": "65.00",
+    "category": "anime",
+    "imagePath": "image/Zoro.jpg"
+  },
+  {
+    "name": "Funko Pop - Movies -Venomized Jack O Lantern",
+    "price": "12.00",
+    "category": "movies",
+    "imagePath": "image/Jack.jpg"
+  },
+  {
+    "name": "Funko Pop - Movies - Emily",
+    "price": "29.99",
+    "category": "movies",
+    "imagePath": "image/emily.webp"
+  },
+  {
+    "name": "Funko Pop - Artists - Britney Spears",
+    "price": "19.99",
+    "category": "artists",
+    "imagePath": "image/Britney.jpg"
+  },
+  {
+    "name": "Funko Pop - Movies - Zero With Bone (Chase)",
+    "price": "99.99",
+    "category": "artists",
+    "imagePath": "image/Zero.jpg"
+  },
+  {
+    "name": "Funko Pop - Movies - Scarlet Witch",
+    "price": "49.99",
+    "category": "movies",
+    "imagePath": "image/Scarlet.jpg"
+  },
+  {
+    "name": "Funko Pop - Artists - Selena",
+    "price": "39.99",
+    "category": "artists",
+    "imagePath": "image/Selena.webp"
+  },
+  {
+    "name": "Funko Pop - Movies - Dracula",
+    "price": "49.99",
+    "category": "Movies",
+    "imagePath": "image/Dracula.webp"
+  },
+  {
+    "name": "Funko Pop - Sports - Lebron James",
+    "price": "29.99",
+    "category": "sports",
+    "imagePath": "image/Lebron.webp"
+  },
+  {
+    "name": "Funko Pop - Sports - Kobe Bryant",
+    "price": "330.00",
+    "category": "sports",
+    "imagePath": "image/Kobe.png"
+
+  },
+  {
+    "name": "Funko Pop - Sports - Corey Seager",
+    "price": "9.99",
+    "category": "sports",
+    "imagePath": "image/Corey.jpg"
+  },
+  {
+    "name": "Funko Pop - Sports - Mookie Bets",
+    "price": "34.99",
+    "category": "sports",
+    "imagePath": "image/Mookie.jpg"
+  },
+  {
+    "name": "Funko Pop - Sports - Cody bellinger",
+    "price": "12.99",
+    "category": "sports",
+    "imagePath": "image/Cody.jpg"
+  }
+]

@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>FunkoFever</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header>
@@ -27,23 +28,23 @@
     <button type="submit">Search</button>
   </form>
 
-  {{#each items}}
-  <section class="featured">
-    <h2>{{name}}</h2>
-    <div class="product">
-      <img src="path_to_image" alt="{{name}}">
-      <h3>{{name}}</h3>
-      <p>Price: ${{price}}</p>
-      <a href="/product/{{@index}}">View Details</a>
-    </div>
-  </section>
-  {{/each}}
+{{#each items}}
+<section class="featured">
+  <h2>{{name}}</h2>
+  <div class="product">
+    <img src="{{imagePath}}" alt="{{name}}" class="product-image">
+    <p>Price: ${{price}}</p>
+    <a href="/product/{{@index}}">View Details</a>
+  </div>
+</section>
+{{/each}}
+
 
   <footer>
     <p>&copy; 2023 FunkoFever - All rights reserved</p>
   </footer>
 
-  <script src="scripts.js"></script>
+  
 </body>
 </html>
 
