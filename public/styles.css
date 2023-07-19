@@ -1,40 +1,13 @@
-body, h1, h2, h3, p, ul, li, img, a {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-family: Arial, sans-serif;
-  color: red;
-}
-
 header {
   background-color: #333;
   color: #fff;
   padding: 20px;
 }
 
-nav {
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: right;
-}
-
 nav a {
   color: #fff;
   text-decoration: none;
   margin-right: 20px;
-}
-
-#cart {
-  font-size: 20px;
-  position: relative;
-  bottom: 8px;
-}
-
-h1 {
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
 }
 
 .search-form {
@@ -46,19 +19,21 @@ h1 {
   width: 300px;
 }
 
-.featured {
-  text-align: center;
-  padding: 20px;
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .product {
-  display: inline-block;
-  width: calc(25% - 20px); /* 25% width for each product with 20px gap */
-  text-align: center;
+  width: calc(25% - 20px);
+  padding: 10px;
+  box-sizing: border-box;
   margin: 10px;
-  box-sizing: border-box; /* Include padding and border within the defined width */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
 }
-
 
 .product h3 {
   font-size: 18px;
@@ -114,7 +89,6 @@ footer {
   width: 100%;
   background-color: #333;
   color: #fff;
-  padding: 20px;
   text-align: center;
 }
 
