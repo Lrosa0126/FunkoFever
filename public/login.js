@@ -12,9 +12,9 @@ const login = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/'); // Redirect user to home page
+      document.location.replace('/');
     } else {
-      alert('Log in failed'); // Alert user that log in failed
+      alert('Log in failed');
     }
   }
 };
