@@ -46,70 +46,70 @@
     "name": "Funko Pop - Anime - Roronoa Zoro",
     "price": "65.00",
     "category": "anime",
-    "imagePath": "image/Zoro.jpg"
+    "imagePath": "/image/Zoro.jpg"
   },
   {
     "id":7,
     "name": "Funko Pop - Movies -Venomized Jack O Lantern",
     "price": "12.00",
     "category": "movies",
-    "imagePath": "image/Jack.jpg"
+    "imagePath": "/image/Jack.jpg"
   },
   {
     "id":8,
     "name": "Funko Pop - Movies - Emily",
     "price": "29.99",
     "category": "movies",
-    "imagePath": "image/emily.webp"
+    "imagePath": "/image/emily.webp"
   },
   {
     "id":9,
     "name": "Funko Pop - Artists - Britney Spears",
     "price": "19.99",
     "category": "artists",
-    "imagePath": "image/Britney.jpg"
+    "imagePath": "/image/Britney.jpg"
   },
   {
     "id":10,
     "name": "Funko Pop - Movies - Zero With Bone (Chase)",
     "price": "99.99",
     "category": "artists",
-    "imagePath": "image/Zero.jpg"
+    "imagePath": "/image/Zero.jpg"
   },
   {
     "id":11,
     "name": "Funko Pop - Movies - Scarlet Witch",
     "price": "49.99",
     "category": "movies",
-    "imagePath": "image/Scarlet.jpg"
+    "imagePath": "/image/Scarlet.jpg"
   },
   {
     "id":12,
     "name": "Funko Pop - Artists - Selena",
     "price": "39.99",
     "category": "artists",
-    "imagePath": "image/Selena.webp"
+    "imagePath": "/image/Selena.webp"
   },
   {
     "id":13,
     "name": "Funko Pop - Movies - Dracula",
     "price": "49.99",
     "category": "Movies",
-    "imagePath": "image/Dracula.webp"
+    "imagePath": "/image/Dracula.webp"
   },
   {
     "id":14,
     "name": "Funko Pop - Sports - Lebron James",
     "price": "29.99",
     "category": "sports",
-    "imagePath": "image/Lebron.webp"
+    "imagePath": "/image/Lebron.webp"
   },
   {
     "id":15,
     "name": "Funko Pop - Sports - Kobe Bryant",
     "price": "330.00",
     "category": "sports",
-    "imagePath": "image/Kobe.png"
+    "imagePath": "/image/Kobe.png"
 
   },
   {
@@ -117,20 +117,20 @@
     "name": "Funko Pop - Sports - Corey Seager",
     "price": "9.99",
     "category": "sports",
-    "imagePath": "image/Corey.jpg"
+    "imagePath": "/image/Corey.jpg"
   },
   {
     "id":17,
     "name": "Funko Pop - Sports - Mookie Bets",
     "price": "34.99",
     "category": "sports",
-    "imagePath": "image/Mookie.jpg"
+    "imagePath": "/image/Mookie.jpg"
   },
   {
     "id":18,
     "name": "Funko Pop - Sports - Cody bellinger",
     "price": "12.99",
     "category": "sports",
-    "imagePath": "image/Cody.jpg"
+    "imagePath": "/image/Cody.jpg"
   }
 ]
