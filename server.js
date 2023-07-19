@@ -1,4 +1,3 @@
-
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
@@ -49,7 +48,7 @@ app.get('/product/:id', (req, res) => {
   const productId = parseInt(req.params.id, 10); // Convert the ID parameter to a number
   console.log('Product ID:', productId);
   // Find the product in the funkoData array based on the id
-  const product = funkoData.find(item => item.id === productId);
+  const product = funkoData.find((item) => item.id === productId);
 
   if (!product) {
     // Handle case when product is not found
@@ -64,10 +63,16 @@ app.get('/cart', (req, res) => {
   res.render('cart', { cart: getCartData(), layout: 'main' });
 });
 
+app.get('/login', (req, res) => {
+  res.render('login', { layout: 'main' });
+});
+//added 7-19-21 4:42pm
+app.get('/signup', (req, res) => {
+  res.render('signup', { layout: 'main' });
+});
+
 app.use('/api', homeController);
 app.use(routes);
-
-
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
