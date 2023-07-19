@@ -20,7 +20,9 @@ const sess = {
   }),
 };
 
-const hbs = exphbs.create({ /* handlebars configuration */ });
+const hbs = exphbs.create({
+  /* handlebars configuration */
+});
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
