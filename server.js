@@ -9,6 +9,7 @@ const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const funkoData = require('./Products/funkoData.json');
 console.log('funkoData', funkoData);
+const { getCartData } = require('./public/cart');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
