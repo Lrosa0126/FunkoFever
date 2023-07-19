@@ -25,18 +25,20 @@
       </section>
     </header>
 
-    <div class='product-container'>
-      {{#each items}}
-        <a href='/product/{{id}}' class='product-link'>
-          <div class='product'>
-            <h2>{{name}}</h2>
-            <img src='{{imagePath}}' alt='{{name}}' class='product-image' />
-            <p>Price: ${{price}}</p>
-            <a href='/product/{{id}}'>View Details</a>
-          </div>
-        </a>
-      {{/each}}
-    </div>
+  <div id="product-container">
+    {{#each items}}
+    <a href="/product/{{id}}" class="product-link">
+      <div class="product">
+        <h2>{{name}}</h2>
+        <img src="{{imagePath}}" alt="{{name}}" class="product-image">
+        <p>Price: ${{price}}</p>
+        <a href="/product/{{id}}">View Details</a>
+        <button class="add-to-cart-button" data-itemid="{{id}}">Add to Cart</button>
+      </div>
+    </a>
+    {{/each}}
+  </div>
+
 
     <footer>
       <p>&copy; 2023 FunkoFever - All rights reserved</p>
