@@ -12,7 +12,7 @@ const { getCartData } = require('./public/cart');
 const { Product } = require('./models');
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+//heroku
 const calculateTotal = (cart) => {
   if (!cart || !Array.isArray(cart) || cart.length === 0) {
     return 0;
@@ -84,7 +84,7 @@ app.get('/search', async (req, res) => {
 
     // Perform the search logic to find items that match the search query
     const searchResults = funkoData.filter((item) =>
-      item.name.toLowerCase().includes(query.toLowerCase())
+      item.name.toLowerCase().includes(query.toLowerCase()),
     );
 
     // Send the search results to the client
