@@ -33,7 +33,8 @@
         <img src="{{imagePath}}" alt="{{name}}" class="product-image">
         <p>Price: ${{price}}</p>
         <a href="/product/{{id}}">View Details</a>
-        <button class="add-to-cart-button" data-itemid="{{id}}">Add to Cart</button>
+        <form method="POST" action="cart"><input name="id" type="hidden" value="{{id}}" /><button class="add-to-cart-button" data-itemid="{{id}}">Add to Cart</button></form>
+        
       </div>
     </a>
     {{/each}}
