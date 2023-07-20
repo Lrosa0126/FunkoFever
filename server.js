@@ -122,3 +122,47 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
 });
+
+// added code:
+app.post('/api/users/register', async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
+    // Check if the email is already in use
+    const existingUser = await User.findOne({ where: { email } });
+    if (existingUser) {
+      return res.status(400).json({ message: 'Email already in use' });
+    }
+    // Create the user in the database
+    const user = await User.create({ name, email, password });
+    // Set up a session for the new user
+    req.session.user = { id: user.id, name: user.name, email: user.email };
+    res.status(201).json({ user });
+  } catch (error) {
+    console.error('Error during registration:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+// Route for user login
+app.post('/api/users/login', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    // Find the user with the provided email using Sequelize User model
+    const user = await User.findOne({ where: { email } });
+    if (!user) {
+      // User not found
+      return res.status(404).json({ message: 'User not found' });
+    }
+    // Verify the password using the checkPassword method of the User model
+    const passwordValid = user.checkPassword(password);
+    if (!passwordValid) {
+      // Password is incorrect
+      return res.status(401).json({ message: 'Incorrect password' });
+    }
+    // Password is correct, user is authenticated
+    req.session.user = { id: user.id, name: user.name, email: user.email };
+    res.status(200).json({ message: 'Login successful', user });
+  } catch (error) {
+    console.error('Error during login:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
