@@ -1,11 +1,11 @@
 <div class="cart">
   <h2>Shopping Cart</h2>
   <ul>
-    {{#each cartItems}}
+    {{#each cart}}
     <li>
-      <span>{{name}}</span>
-      <span>Quantity: {{quantity}}</span>
-      <span>Price: ${{price}}</span>
+      <span>{{cart.name}}</span>
+      <span>Quantity: {{cart.quantity}}</span>
+      <span>Price: ${{cart.price}}</span>
       <button class="remove-item" data-id="{{id}}">Remove</button>
     </li>
     {{/each}}

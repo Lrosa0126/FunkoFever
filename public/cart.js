@@ -1,4 +1,4 @@
-// cart.js
+
 
 const cart = {
     cartItems: [],
@@ -6,11 +6,10 @@ const cart = {
   };
   
   function updateCart() {
-    // This function remains the same
+
   }
   
   function addItemToCart(itemId) {
-    // This function remains the same
   }
   
   function getCartData() {

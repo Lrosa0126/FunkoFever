@@ -9,7 +9,7 @@ const sequelize = require('./config/connection');
 const funkoData = require('./Products/funkoData.json');
 console.log('funkoData', funkoData);
 const { getCartData } = require('./public/cart');
-
+const { Product } = require('./models');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -60,8 +60,30 @@ app.get('/product/:id', (req, res) => {
 });
 app.get('/cart', (req, res) => {
   // Render the cart view (cart.handlebars) and pass the cart data
-  res.render('cart', { cart: getCartData(), layout: 'main' });
+  const cart = req.session.cart || [];
+  console.log('cart', cart);
+  res.render('cart', { cart, layout: 'main' });
 });
+
+app.post('/cart', async (req, res) => {
+  console.log(req.body)
+ try { const productId = req.body.id
+  const cart = req.session.cart || [];
+  const product = funkoData.find((item) => item.id == productId);
+  cart.push(product)
+  req.session.cart = cart;
+  req.session.save(() => {
+    console.log(productId)
+    console.log(product)
+    console.log(cart)
+    console.log(req.session);
+    res.redirect(`/`);
+  })
+ } catch(err) {
+  console.log(err);
+  res.status(500).json(err);
+ }
+})
 
 app.get('/login', (req, res) => {
   res.render('login', { layout: 'main' });
