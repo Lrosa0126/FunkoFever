@@ -1,5 +1,29 @@
 <link rel='stylesheet' href='/styles.css' />
-
+<html>
+  <head>
+    <title>FunkoFever</title>
+    <link rel='stylesheet' href='/styles.css' />
+  </head>
+  <body>
+    <header>
+      <nav class='nav-menu'>
+        <a href='/'>Home</a>
+        <a href='/cart'>Cart</a>
+        <a href='/login'>Login</a>
+        <a href='/signup'>Signup</a>
+      </nav>
+      <img
+        src='/image/FunkoFever.png'
+        alt='FunkoFever Logo'
+        class='logo-image'
+      />
+      <section class='Search'>
+        <form class='search-form' action='/search' method='GET'>
+          <input type='text' name='query' placeholder='Search...' required />
+          <button type='submit'>Search</button>
+        </form>
+      </section>
+    </header>
 <div class='container'>
   <div class='login-card'>
     <h2 class='page-title'>Login</h2>
@@ -39,11 +63,6 @@
   </div>
 </div>
 
-<img
-  src='/image/FunkoFever.png'
-  alt='FunkoFever Logo'
-  class='logo-image'
-  id='login-logo'
-/>
+
 <a href='/'>Home</a>
 <script src='./js/login.js'></script>

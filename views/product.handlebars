@@ -1,17 +1,32 @@
 <html>
   <head>
-    <title>Product Details</title>
+    <title>FunkoFever</title>
     <link rel='stylesheet' href='/styles.css' />
   </head>
   <body>
     <header>
-      <!-- Header content -->
+      <nav class='nav-menu'>
+        <a href='/'>Home</a>
+        <a href='/cart'>Cart</a>
+        <a href='/login'>Login</a>
+        <a href='/signup'>Signup</a>
+      </nav>
+      <img
+        src='/image/FunkoFever.png'
+        alt='FunkoFever Logo'
+        class='logo-image'
+      />
+      <section class='Search'>
+        <form class='search-form' action='/search' method='GET'>
+          <input type='text' name='query' placeholder='Search...' required />
+          <button type='submit'>Search</button>
+        </form>
+      </section>
     </header>
 
     <main>
       <h1>Product Details</h1>
-
-      <div class='product-details'>
+      <div class='product-details product'>
         <h2>{{product.name}}</h2>
         <img
           src='{{product.imagePath}}'
@@ -21,12 +36,6 @@
         <p>Price: ${{product.price}}</p>
       </div>
     </main>
-    <img
-      src='/image/FunkoFever.png'
-      alt='FunkoFever Logo'
-      class='logo-image'
-      id='login-logo'
-    />
     <a href='/'>Home</a>
     <footer>
 

@@ -1,20 +1,35 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Search Results</title>
-  <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-  <header>
-    <!-- Header content -->
-  </header>
+  <head>
+    <title>FunkoFever</title>
+    <link rel='stylesheet' href='/styles.css' />
+  </head>
+  <body>
+    <header>
+      <nav class='nav-menu'>
+        <a href='/'>Home</a>
+        <a href='/cart'>Cart</a>
+        <a href='/login'>Login</a>
+        <a href='/signup'>Signup</a>
+      </nav>
+      <img
+        src='/image/FunkoFever.png'
+        alt='FunkoFever Logo'
+        class='logo-image'
+      />
+      <section class='Search'>
+        <form class='search-form' action='/search' method='GET'>
+          <input type='text' name='query' placeholder='Search...' required />
+          <button type='submit'>Search</button>
+        </form>
+      </section>
+    </header>
 
   <main>
     <h1>Search Results</h1>
     
     <div class="search-results">
       {{#each results}}
-        <div class="product-details">
+        <div class="product-details product">
           <h2>{{name}}</h2>
           <img src="{{imagePath}}" alt="{{name}}" class="product-image">
           <p>Price: ${{price}}</p>
