@@ -1,15 +1,15 @@
-<link rel="stylesheet" href="/styles.css">
-
-<div class="product-container">
+<link rel='stylesheet' href='/styles.css' />
+<a href='/'>Home</a>
+<div class='product-container'>
   <h2>Shopping Cart</h2>
   <ul>
     {{#each cart}}
-    <li>
-      <h2>{{name}}</h2>
-       <img src="{{imagePath}}" alt="{{name}}" class="product-image">
-      <p>Price: ${{price}}</p>
-      <button class="remove-item" data-id="{{id}}">Remove</button>
-    </li>
+      <li>
+        <h2>{{name}}</h2>
+        <img src='{{imagePath}}' alt='{{name}}' class='product-image' />
+        <p>Price: ${{price}}</p>
+        <button class='remove-item' data-id='{{id}}'>Remove</button>
+      </li>
     {{/each}}
   </ul>
   <p>Total: ${{calculateTotal cart}}</p>
