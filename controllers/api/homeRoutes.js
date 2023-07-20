@@ -1,5 +1,6 @@
-const router = require('express').Router();
+const router = require('express').router;
 const { User } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
@@ -9,11 +10,9 @@ router.get('/', async (req, res) => {
       order: [['name', 'ASC']],
     });
 
-    // Serialize user data so templates can read it
-    const users = userData.map((project) => project.get({ plain: true }));
+    const users = userData.map((user) => user.get({ plain: true }));
 
-    // Pass serialized data into Handlebars.js template
-    res.render('homepage', { users });
+    // Pass serialized data into Handlebars.js template res.render('homepage', { users });
   } catch (err) {
     res.status(500).json(err);
   }
