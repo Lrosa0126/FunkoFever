@@ -78,7 +78,22 @@ app.get('/product/:id', (req, res) => {
     res.render('product', { product, layout: 'main' });
   }
 });
+app.get('/search', async (req, res) => {
+  try {
+    const { query } = req.query;
 
+    // Perform the search logic to find items that match the search query
+    const searchResults = funkoData.filter((item) =>
+      item.name.toLowerCase().includes(query.toLowerCase())
+    );
+
+    // Send the search results to the client
+    res.render('search-results', { results: searchResults });
+  } catch (error) {
+    console.error('Error during search:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
 app.get('/cart', (req, res) => {
   // Render the cart view (cart.handlebars) and pass the cart data
   const cart = req.session.cart || [];
