@@ -1,14 +1,13 @@
-<form {{action 'authenticate' on='submit'}}>
-  <label for='identification'>Login</label>
-  {{input id='identification' placeholder='Enter Login' value=identification}}
+<form>
+  <input id='identification' placeholder='Enter Login' value='identification' />
   <label for='password'>Password</label>
-  {{input
+  <input
     id='password'
     placeholder='Enter Password'
     type='password'
-    value=password
-  }}
+    value='password'
+  />
   <button type='submit'>Login</button>
 </form>
-
+<script src='/js/login.js'></script>
 <!--not sure about this one111 -->
