@@ -1,4 +1,28 @@
-{{! Sign Up Page }}
+<html>
+  <head>
+    <title>FunkoFever</title>
+    <link rel='stylesheet' href='/styles.css' />
+  </head>
+  <body>
+    <header>
+      <nav class='nav-menu'>
+        <a href='/'>Home</a>
+        <a href='/cart'>Cart</a>
+        <a href='/login'>Login</a>
+        <a href='/signup'>Signup</a>
+      </nav>
+      <img
+        src='/image/FunkoFever.png'
+        alt='FunkoFever Logo'
+        class='logo-image'
+      />
+      <section class='Search'>
+        <form class='search-form' action='/search' method='GET'>
+          <input type='text' name='query' placeholder='Search...' required />
+          <button type='submit'>Search</button>
+        </form>
+      </section>
+    </header>
 <main id='signup' class='flex-center'>
   <div id='card' class='shadow'>
     <div id='card-container'>
