@@ -1,16 +1,42 @@
-<link rel='stylesheet' href='/styles.css' />
-<a href='/'>Home</a>
-<div class='product-container'>
-  <h2>Shopping Cart</h2>
-  <ul>
-    {{#each cart}}
-      <li>
-        <h2>{{name}}</h2>
-        <img src='{{imagePath}}' alt='{{name}}' class='product-image' />
-        <p>Price: ${{price}}</p>
-        <button class='remove-item' data-id='{{id}}'>Remove</button>
-      </li>
-    {{/each}}
-  </ul>
-  <p>Total: ${{calculateTotal cart}}</p>
-</div>
+<html>
+  <head>
+    <title>FunkoFever</title>
+    <link rel='stylesheet' href='/styles.css' />
+  </head>
+  <body>
+    <header>
+      <nav class='nav-menu'>
+        <a href='/'>Home</a>
+        <a href='/cart'>Cart</a>
+        <a href='/login'>Login</a>
+        <a href='/signup'>Signup</a>
+      </nav>
+      <img
+        src='/image/FunkoFever.png'
+        alt='FunkoFever Logo'
+        class='logo-image'
+      />
+      <section class='Search'>
+        <form class='search-form' action='/search' method='GET'>
+          <input type='text' name='query' placeholder='Search...' required />
+          <button type='submit'>Search</button>
+        </form>
+      </section>
+    </header>
+    <a href='/'>Home</a>
+    <div class='product-container'>
+      <h1>Shopping Cart</h1>
+      <div class="cart-items">
+        {{#each cart}}
+        <div class='product cart-item'>
+          <h2>{{name}}</h2>
+          <img src='{{imagePath}}' alt='{{name}}' class='product-image' />
+          <p>Price: ${{price}}</p>
+          <button class='remove-item' data-id='{{id}}'>Remove</button>
+        </div>
+        {{/each}}
+      </div>
+      <h4>Total: ${{calculateTotal cart}}</h4>
+    </div>
+  </body>
+</html>

@@ -37,8 +37,38 @@ nav a {
   margin: 0 auto;
 }
 
+/* Add this CSS style block within your styles.css or your existing CSS file */
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* Update the .cart-items class to use flexbox for grid layout */
+.cart-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* Set the width for each cart item in the grid */
+.cart-item {
+  flex-basis: calc(25% - 20px);
+  margin: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+
 .product {
   width: calc(25% - 20px);
+  background-color: #333;
   box-sizing: border-box;
   margin: 10px;
   border: 1px solid #ccc;
@@ -47,21 +77,32 @@ nav a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+h2 {
+ color: yellow; 
+}
+
+h4 {
+  color: rgb(224, 121, 121);
+  font-weight: bolder;
+  font-size: 50px;
+}
 .product h3 {
   font-size: 18px;
   margin: 10px 0;
 }
 
 .product p {
-  font-size: 14px;
+  font-size: 22px;
   margin: 5px 0;
+  color: yellow; 
+  font-weight: bold;
 }
 
 .product a {
   display: block;
   margin-top: 20px;
-  color: #e40000;
-  background-color: #f5f5f5;
+  color: yellow;
+  background-color: #7e7b7b00;
   padding: 5px 10px;
   text-decoration: none;
   border-radius: 5px;
@@ -70,14 +111,15 @@ nav a {
 .product-link {
   display: inline-block;
   text-decoration: none;
+  
 }
 
 .product-link:hover {
-  background-color: hwb(240 27% 65%);
+  background-color: hwb(120 47% 51%);
 }
 
 .Search {
-  background-color: #f5f5f5;
+  background-color: yellow;
   padding: 30px;
   margin-left: 30%;
   margin-right: 30%;
@@ -121,20 +163,16 @@ footer {
 }
 #login-logo {
   position: fixed;
-  top: 10px; /* Adjust this value to set the vertical position from the top */
-  right: 10px; /* Adjust this value to set the horizontal position from the right */
+  top: 10px;
+  right: 10px; 
 }
 #cart-logo {
   position: fixed;
-  top: 10px; /* Adjust this value to set the vertical position from the top */
-  right: 10px; /* Adjust this value to set the horizontal position from the right */
+  top: 10px; 
+  right: 10px; 
 }
 
-/* log-in :
 
-/* Add this style block within the <head> section of your HTML page */
-
-/* Global styles for the body to improve overall look and readability */
 body {
   font-family: 'Helvetica Neue', sans-serif;
   line-height: 1.6;
@@ -150,7 +188,7 @@ body {
   height: 100vh;
 }
 
-/* Common styles for the login and signup cards */
+
 .login-card {
   width: 320px;
   padding: 30px;
@@ -170,7 +208,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Styles for the login and signup forms */
+
 .form {
   display: flex;
   flex-direction: column;

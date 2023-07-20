@@ -11,6 +11,7 @@ console.log('funkoData', funkoData);
 const { getCartData } = require('./public/cart');
 const { Product } = require('./models');
 const app = express();
+
 const PORT = process.env.PORT || 3001;
 
 const calculateTotal = (cart) => {
@@ -122,6 +123,36 @@ app.post('/cart', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+
+app.delete('/remove/:id', (req, res) => {
+  try {
+    const productId = parseInt(req.params.id, 10);
+    const cart = req.session.cart || [];
+
+    // Find the index of the item in the cart
+    const itemIndex = cart.findIndex((item) => item.id === productId);
+
+    if (itemIndex !== -1) {
+      // Remove the item from the cart array
+      cart.splice(itemIndex, 1);
+      req.session.cart = cart;
+      req.session.save(() => {
+        // Redirect back to the cart page after successful removal
+        res.redirect('/cart');
+      });
+    } else {
+      // Item not found in the cart, handle the error
+      res.status(404).send('Item not found in the cart');
+    }
+  } catch (error) {
+    console.error('Error during item removal:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+
 
 app.get('/login', (req, res) => {
   res.render('login', { layout: 'main' });
