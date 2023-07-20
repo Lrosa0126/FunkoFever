@@ -66,7 +66,7 @@ app.get('/cart', (req, res) => {
 app.get('/login', (req, res) => {
   res.render('login', { layout: 'main' });
 });
-//added 7-19-21 4:42pm
+//added 7-19-21 4:42pm ll
 app.get('/signup', (req, res) => {
   res.render('signup', { layout: 'main' });
 });
