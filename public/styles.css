@@ -40,7 +40,7 @@ nav a {
 /* Add this CSS style block within your styles.css or your existing CSS file */
 
 .product-container {
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: 0 20px;
