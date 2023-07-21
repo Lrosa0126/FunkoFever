@@ -40,7 +40,7 @@ nav a {
 /* Add this CSS style block within your styles.css or your existing CSS file */
 
 .product-container {
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: 0 20px;
@@ -67,7 +67,7 @@ nav a {
 
 
 .product {
-  width: calc(25% - 20px);
+
   background-color: #333;
   box-sizing: border-box;
   margin: 10px;
