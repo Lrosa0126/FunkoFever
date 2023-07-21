@@ -30,6 +30,10 @@ Welcome to FunkoFever, your ultimate destination for pop culture collectibles! T
 
 [FunkoFever.com](https://www.funkofever.com)
 
+![Landing Page](/public/image/readme%20screenshots/Landing%20Page.png "Landing Page")
+![Cart](/public/image/readme%20screenshots/Cart.png "Cart")
+![Login](/public/image/readme%20screenshots/Login.png "Login")
+
 ## Installation
 
 To set up FunkoFever locally on your machine, follow these steps:
@@ -61,6 +65,6 @@ We welcome contributions from the community to make FunkoFever even better. If y
 
 ## License
 
-[Insert your chosen license here (e.g., MIT License)](LICENSE)
+Copyright 2023 FunkoFever - Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---
